@@ -1,0 +1,80 @@
+
+:root{
+  --ink:#17324a;--muted:#6b7c8c;--bg:#f4f7fa;--card:#fff;--line:#e5ebf1;
+  --navy:#123c5a;--teal:#0f7180;
+  --exam:#2f80ed;--magen:#e35d6a;--bagrut:#8e5bd9;--holiday:#e2a72e;--activity:#30a66b;--parents:#d56f25;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,"Noto Sans Arabic","Segoe UI",sans-serif;background:var(--bg);color:var(--ink)}
+button,input{font:inherit}
+button{cursor:pointer}
+.hero{background:linear-gradient(135deg,var(--navy),var(--teal));color:white;padding:40px 16px 64px}
+.hero-inner{text-align:center;max-width:1100px;margin:auto}
+.school{font-size:.95rem;opacity:.9}
+h1{font-size:clamp(2rem,6vw,3.5rem);margin:8px 0 10px}
+.class-pill{display:inline-block;padding:8px 16px;border:1px solid #ffffff55;background:#ffffff16;border-radius:999px;font-weight:700}
+.teacher{margin:14px 0 0}
+.wrap{max-width:1100px;margin:-34px auto 40px;padding:0 14px}
+.next-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 15px 40px #17324a16}
+.mini-title{font-size:.78rem;font-weight:800;color:var(--teal)}
+.next-card h2{font-size:1.35rem;margin:5px 0}
+.next-card p{margin:0;color:var(--muted)}
+.countdown{min-width:130px;text-align:center;border-radius:16px;background:#eef8f9;color:var(--teal);padding:14px;font-size:1.05rem;font-weight:800}
+.toolbar{margin:22px 0 10px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.view-tabs{display:flex;background:#eaf0f4;border-radius:12px;padding:4px}
+.tab{border:0;background:transparent;padding:9px 14px;border-radius:9px;color:var(--muted);font-weight:700}
+.tab.active{background:white;color:var(--navy);box-shadow:0 2px 8px #17324a13}
+#search{width:min(360px,100%);padding:11px 13px;border:1px solid var(--line);border-radius:12px;background:white;outline:none}
+.filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}
+.filters button{border:1px solid var(--line);background:white;border-radius:999px;padding:8px 12px;color:var(--ink);font-weight:700}
+.filters button.active{background:var(--navy);color:white;border-color:var(--navy)}
+.legend{display:flex;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.86rem;margin:12px 0 18px}
+.c{width:10px;height:10px;border-radius:50%;display:inline-block;margin-left:5px}
+.c.exam,.event.exam{--event:var(--exam)} .c.magen,.event.magen{--event:var(--magen)}
+.c.bagrut,.event.bagrut{--event:var(--bagrut)} .c.holiday,.event.holiday{--event:var(--holiday)}
+.c.activity,.event.activity{--event:var(--activity)} .c.parents,.event.parents{--event:var(--parents)}
+.c.exam,.c.magen,.c.bagrut,.c.holiday,.c.activity,.c.parents{background:var(--event)}
+.month-nav{display:grid;grid-template-columns:45px 1fr 45px;align-items:center;background:white;border:1px solid var(--line);border-radius:18px 18px 0 0;padding:10px}
+.month-nav h2{text-align:center;margin:0;font-size:1.25rem}
+.month-nav button{border:0;background:#f2f6f8;border-radius:10px;height:38px;font-size:1.6rem;color:var(--navy)}
+.weekday-row{display:grid;grid-template-columns:repeat(7,1fr);background:#eef3f6;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.weekday-row span{text-align:center;padding:9px 3px;font-size:.8rem;color:var(--muted);font-weight:700}
+.month-grid{display:grid;grid-template-columns:repeat(7,1fr);background:var(--line);gap:1px;border:1px solid var(--line);border-radius:0 0 18px 18px;overflow:hidden}
+.day{min-height:125px;background:white;padding:8px;position:relative}
+.day.outside{background:#f8fafb;color:#aab4bd}
+.day.today{box-shadow:inset 0 0 0 2px var(--teal)}
+.day-num{font-weight:800;font-size:.88rem;margin-bottom:7px}
+.events{display:flex;flex-direction:column;gap:5px}
+.event{border:0;text-align:right;background:color-mix(in srgb,var(--event) 12%,white);border-right:4px solid var(--event);border-radius:7px;padding:5px 6px;color:var(--ink);font-size:.72rem;line-height:1.35}
+.event:hover{background:color-mix(in srgb,var(--event) 20%,white)}
+.more{font-size:.72rem;color:var(--muted);margin-top:4px}
+.list-view{display:block}
+.list-month{background:white;border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:14px}
+.list-month h3{margin:0;background:#eef3f6;padding:11px 14px}
+.list-item{display:grid;grid-template-columns:80px 1fr 6px;gap:11px;align-items:center;padding:12px 14px;border-top:1px solid #f0f2f4}
+.list-date{font-weight:800;font-size:.88rem}
+.list-title{font-weight:700}
+.list-original{font-size:.74rem;color:var(--muted);margin-top:2px}
+.typebar{width:6px;height:38px;border-radius:10px;background:var(--event)}
+.source-note{margin-top:18px;background:#eef8f9;border:1px solid #d5edef;color:#3f6570;padding:13px 15px;border-radius:14px;font-size:.88rem}
+.hidden{display:none!important}
+.modal{position:fixed;inset:0;background:#0b2133aa;display:grid;place-items:center;padding:16px;z-index:50}
+.modal-card{background:white;width:min(500px,100%);border-radius:20px;padding:24px;position:relative;box-shadow:0 25px 70px #07182766}
+.close{position:absolute;left:14px;top:12px;width:34px;height:34px;border:0;border-radius:50%;background:#f1f4f6;font-size:1.4rem}
+.type-label{font-size:.8rem;font-weight:800;color:var(--teal)}
+.modal-card h3{font-size:1.35rem;margin:8px 0}
+.modal-card p{color:var(--muted)}
+.original{border-top:1px solid var(--line);padding-top:12px;font-size:.86rem}
+.wa{border:0;background:#20b958;color:white;padding:10px 14px;border-radius:11px;font-weight:800}
+footer{max-width:1100px;margin:0 auto 30px;padding:0 14px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;color:var(--muted)}
+@media(max-width:750px){
+  .next-card{flex-direction:column;align-items:stretch}.countdown{width:100%}
+  .day{min-height:88px;padding:5px}.event{font-size:.64rem;padding:4px}.weekday-row span{font-size:.7rem}
+  .list-item{grid-template-columns:62px 1fr 5px}
+}
+@media(max-width:500px){
+  .hero{padding-top:30px}.wrap{padding:0 8px}
+  .weekday-row span{font-size:.62rem}.day{min-height:78px}.event{font-size:.59rem;line-height:1.25}
+  .filters button{font-size:.78rem;padding:7px 10px}
+}

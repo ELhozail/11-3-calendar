@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#123C5A">
+  <meta name="description" content="البرنامج السنوي لطلاب وأهالي الصف الحادي عشر 3">
+  <title>البرنامج السنوي | الحادي عشر 3</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="school">مدرسة النجاح الثانوية</div>
+    <h1>البرنامج السنوي</h1>
+    <div class="class-pill">الحادي عشر 3 • 2026–2027</div>
+    <p class="teacher">مربي الصف: <strong>عبد الحليم الهزيل</strong></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="next-card">
+    <div class="next-main">
+      <span class="mini-title">أقرب موعد</span>
+      <h2 id="nextTitle">جاري التحميل…</h2>
+      <p id="nextDate"></p>
+    </div>
+    <div id="countdown" class="countdown"></div>
+  </section>
+
+  <section class="toolbar">
+    <div class="view-tabs">
+      <button class="tab active" data-view="calendar">التقويم</button>
+      <button class="tab" data-view="list">قائمة المواعيد</button>
+    </div>
+    <input id="search" type="search" placeholder="ابحث: رياضيات، بجروت، رحلة…">
+  </section>
+
+  <section id="filters" class="filters">
+    <button class="active" data-type="all">الكل</button>
+    <button data-type="exam">الامتحانات</button>
+    <button data-type="magen">مِגן</button>
+    <button data-type="bagrut">بجروت</button>
+    <button data-type="holiday">العطل والمناسبات</button>
+    <button data-type="activity">الفعاليات</button>
+    <button data-type="parents">الأهالي والشهادات</button>
+  </section>
+
+  <section class="legend">
+    <span><i class="c exam"></i> امتحان</span>
+    <span><i class="c magen"></i> مِגן</span>
+    <span><i class="c bagrut"></i> بجروت</span>
+    <span><i class="c holiday"></i> عطلة / مناسبة</span>
+    <span><i class="c activity"></i> فعالية</span>
+    <span><i class="c parents"></i> أهالٍ / شهادات</span>
+  </section>
+
+  <section id="calendarView">
+    <div class="month-nav">
+      <button id="prevMonth" aria-label="الشهر السابق">‹</button>
+      <h2 id="monthTitle"></h2>
+      <button id="nextMonth" aria-label="الشهر التالي">›</button>
+    </div>
+    <div class="weekday-row">
+      <span>الأحد</span><span>الاثنين</span><span>الثلاثاء</span><span>الأربعاء</span><span>الخميس</span><span>الجمعة</span><span>السبت</span>
+    </div>
+    <div id="monthGrid" class="month-grid"></div>
+  </section>
+
+  <section id="listView" class="list-view hidden">
+    <div id="eventList"></div>
+  </section>
+
+  <aside class="source-note">
+    <strong>المصدر:</strong> برنامج الصف في ملف Excel المرفق. المواعيد في هذا الموقع مستخرجة من الخلايا الأصلية للجدول.
+  </aside>
+</main>
+
+<div id="modal" class="modal hidden" role="dialog" aria-modal="true">
+  <div class="modal-card">
+    <button id="closeModal" class="close">×</button>
+    <span id="modalType" class="type-label"></span>
+    <h3 id="modalTitle"></h3>
+    <p id="modalDate"></p>
+    <p id="modalOriginal" class="original"></p>
+    <button id="shareEvent" class="wa">مشاركة الموعد عبر واتساب</button>
+  </div>
+</div>
+
+<footer>
+  <span>الحادي عشر 3 • العام الدراسي 2026–2027</span>
+  <button id="shareSite" class="wa">مشاركة البرنامج</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
