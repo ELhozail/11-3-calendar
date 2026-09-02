@@ -1,6 +1,6 @@
 
 const MONTHS=["يناير","فبراير","مارس","أبريل","مايو","يونيو","يوليو","أغسطس","سبتمبر","أكتوبر","نوفمبر","ديسمبر"];
-const TYPE_LABELS={exam:"امتحان",magen:"مِגן",bagrut:"بجروت",holiday:"عطلة / مناسبة",activity:"فعالية",parents:"أهالٍ / شهادات"};
+const TYPE_LABELS={exam:"امتحان",magen:"מגן",bagrut:"بجروت",holiday:"عطلة / مناسبة",activity:"فعالية",parents:"أهالٍ / شهادات"};
 let events=[],activeType="all",query="",view="calendar";
 let current=new Date(2026,8,1); // September 2026
 const schoolStart=new Date(2026,7,1), schoolEnd=new Date(2027,6,31);
